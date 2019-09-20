@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.jumbo {
+  margin-top: 30px !important;
+
+}
+
+.inhalt {
+  margin-left: 5% !important;
+}
+
+
+.seitenInhalt {
+  margin-left: 80px !important;
+  margin-right: 0px !important;
+  /*width: 100% !important;*/
+}
+
+.rechterSeitenRand {
+  left: 100px !important;
+}
+
+/*für neuen seitenaufbau*/
+
+.wrapper {
+  display: flex !important;  
+  flex-flow: row wrap !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px !important;
+  text-align: left;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: deepskyblue;
+  padding-top: 50px !important;
+  padding-left: 10px !important;
+  max-width: 60% !important;
+}
+
+.aside-1 {
+  background: gold;
+  max-width: 30%;
+}
+
+.aside-2 {
+  background: hotpink;
+  max-width: 20% !important;
+}
+
+@media all and (min-width: 500px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}

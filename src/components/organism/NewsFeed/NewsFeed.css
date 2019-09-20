@@ -1,0 +1,32 @@
+
+
+
+.bm-overlay {
+    width: 300% !important;
+    height: 63% !important;
+    background: rgb(231, 231, 231) !important;
+    top: 100px !important;
+}
+
+.bm-menu {
+    height: 300px !important;
+    margin-top: 100px !important;
+    width: 300px !important;
+}
+
+#button {
+    position: fixed !important;
+    /* left: 0px; */
+    right: inherit !important;
+    align-items: auto;
+    top: 0px;
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0px;
+    padding: 0px;
+    /* border: none; */
+    font-size: 0px;
+    background: #dc3545 !important;
+    cursor: pointer;
+    left: none !important;
+}
