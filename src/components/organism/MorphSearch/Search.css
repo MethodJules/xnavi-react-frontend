@@ -22,12 +22,14 @@
     
     border: 1px solid #e7e7e7 !important;
     border-radius: unset !important;
+    
 }
 
 .outer_border {
-    left: 5%;
-    top: auto;
-    margin-top: 30px;
+    left: 15% !important;
+    top: auto !important;
+    margin-top: 50px !important;
+    
 }
 
 .h1, h1 {

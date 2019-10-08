@@ -8,7 +8,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import CustomSelect from '../../atoms/CustomSelect/CustomSelect';
 import SingleSelect from '../../atoms/SingleSelect/SingleSelect';
-import Accordion from 'react-bootstrap/Accordion'
+import Accordion from 'react-bootstrap/Accordion';
 
 var morphDropDown = {
     position: 'relative',

@@ -7,36 +7,67 @@ import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import SideBar from './components/organism/SideBar/SideBar';
 import NewsFeed from './components/organism/NewsFeed/NewsFeed'
+import Landing from './components/pages/Landing';
+import Download from './components/pages/Logodownload';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Logodownload from './components/pages/Logodownload';
+import Flyerdownload from './components/pages/Flyerdownload';
+import Previewartikel from './components/pages/Previewartikel';
+import Praesentationen from './components/pages/Praesentationen';
+import Programm from './components/pages/Programm';
+import Marktplatz from './components/pages/Marktplatz';
+import './index.css';
+
 
 const App = () => {
   return (
 
+    <Router>
+    
+
     <div>
-      <header class="header">
-        <Header></Header>
-      </header>
-      <div class="wrapper">
+      <Switch>
 
-        <article class="main">
+        <Route path="/landing">
+        <Landing></Landing>
+        </Route>
 
-          <Jumbotron fluid className="jumbo">
-              <Container className="inhalt">
-                
-              </Container>
-          </Jumbotron>  
-          
-        </article>
+        <Route path="/download">
+          <Logodownload></Logodownload>
+        </Route>
 
-        <aside class="aside aside-1">
-          <Search></Search>
-        </aside>
-        
-        <aside class="aside aside-2">
-          <SideBar></SideBar>
-        </aside>
-        
-      </div>
+        <Route path="/flyer-download">
+          <Flyerdownload></Flyerdownload>
+        </Route>
+
+        <Route path="/preview-artikel">
+          <Previewartikel></Previewartikel>
+        </Route>
+
+        <Route path="/praesentationen">
+          <Praesentationen></Praesentationen>
+        </Route>
+
+        <Route path="/programm-0">
+          <Programm></Programm>
+        </Route>
+
+        <Route path="/marktplatz">
+          <Marktplatz></Marktplatz>
+        </Route>
+
+        <Route path="">
+        <Landing></Landing>
+        </Route>
+
+      </Switch>
     </div>
+    </Router>
+
+    
+
+
+    
     
 
 
