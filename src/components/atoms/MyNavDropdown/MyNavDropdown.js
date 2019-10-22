@@ -1,25 +1,26 @@
 import React from "react";
-import { NavDropdown, Navbar, Nav, Button } from 'react-bootstrap';
+import { NavDropdown } from 'react-bootstrap';
 import MyNavDropdownItem from '../MyNavDropdownItem/MyNavDropdownItem';
 class MyNavDropdown extends React.Component {
-    showSettings (event) {
-      event.preventDefault();
-      
-    }
   
-    render () {
-      
-      return (
-        <div>
-            <NavDropdown title={this.props.nav_title} id="basic-nav-dropdown">
+  showSettings(event) {
+    event.preventDefault();
 
-                <MyNavDropdownItem></MyNavDropdownItem>
-                
-                
-            </NavDropdown>
-        </div>
-      );
-    }
   }
-  
-  export default MyNavDropdown;
+
+  render() {
+
+    return (
+      
+        <NavDropdown title={this.props.item.title} id="basic-nav-dropdown">
+          {this.props.item.childs.map((child, index) => {
+            return <MyNavDropdownItem href={child.href} title={child.title} key={index}/>;
+
+          })}
+        </NavDropdown>
+      
+    );
+  }
+}
+
+export default MyNavDropdown;

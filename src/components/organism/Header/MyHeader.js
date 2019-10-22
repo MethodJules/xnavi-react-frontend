@@ -1,42 +1,60 @@
 import React, { } from 'react';
 import './Header.css';
-import { NavDropdown, Navbar, Nav, Button } from 'react-bootstrap';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Landing from '../../pages/Landing';
-import Logodownload from '../../pages/Logodownload';
+import { Navbar, Nav } from 'react-bootstrap';
+import { BrowserRouter as Router } from "react-router-dom";
 import MyNavDropdown from '../../atoms/MyNavDropdown/MyNavDropdown';
+import MyNavLink from '../../atoms/MyNavLink/MyNavLink';
 
 //privsorische objektstruktur als json Ersatz
 var Menu = [
     {
-        titel: "TESTOBJEKT1",
+        title: "Indeko.Navi", href: "/landing",
+        childs: []
+    },
+    {
+        title: "Downloads",
         childs: [
-            { titel: "Unterobjekt1" },
-            { titel: "Unterobjekt2" },
-            { titel: "Unterobjekt3" },
+            { title: "Flyer-Download", href: "/download" },
+            { title: "Logodownload", href: "/download" },
+            { title: "Programm", href: "/download" },
+        ]
+    },
+    {
+        title: "Tagung",
+        childs: [
+            { title: "Präsentation", href: "/praesentationen" },
+            { title: "Programm", href: "/programm-0" },
+            { title: "Marktplatz", href: "/marktplatz" },
+        ]
+    },
+    {
+        title: "x.Navi", href: "#test2",
+        childs: []
+    },
+    {
+        title: "Wissenskarte",
+        childs: [
+            { title: "Karte der Projekte", href: "/#action/3.1" },
+            { title: "Karte der Ergebnisse", href: "/#action/3.2" },
+            { title: "Karet der Events", href: "/#action/3.3" },
         ]
     }, {
-        titel: "TESTOBJEKT2",
-        childs: [
-            { titel: "Unterobjekt4" },
-            { titel: "Unterobjekt5" },
-            { titel: "Unterobjekt6" },
-
-        ]
-    }, {
-        titel: "TESTOBJEKT3",
+        title: "Impressum", href: "/test3",
+        childs: []
+    },
+    {
+        title: "Datenschutz", href: "/test4",
         childs: []
     }
 
 ];
 
 
-class Header extends React.Component {
+class MyHeader extends React.Component {
 
 
     render() {
 
-        var menu_items_level1 = ['indeko.navi', 'downloads', 'tagung', 'wissenskarte', 'x.navi', 'karten', 'impressum', 'datenschutz'];
         return (
 
             <Router>
@@ -49,17 +67,13 @@ class Header extends React.Component {
                             <Nav className="mr-auto">
 
                                 {Menu.map((menuentry, index) => {
-                                    
-                                    if (Array.isArray(menuentry.childs) && menuentry.childs.length) {
-                                        return <MyNavDropdown nav_title={menuentry.titel} key={index}></MyNavDropdown>
-                                    } else {
-                                        return <Nav.Link nav_title="DURCHGEKOMMEN" key={index}> {menuentry.titel} + pruefung erfolgreich </Nav.Link>
-                                    }                                      
-                                    
-                                    
-                                    
 
-                                    
+                                    if (Array.isArray(menuentry.childs) && menuentry.childs.length) {
+                                        return <MyNavDropdown item={menuentry} key={index} ></MyNavDropdown>
+                                    } else {
+                                        return <MyNavLink href={menuentry.href} title={menuentry.title} key={index} />
+                                    }
+
                                 })}
 
                             </Nav>
@@ -71,7 +85,7 @@ class Header extends React.Component {
                         </Navbar.Collapse>
                     </Navbar>
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+                        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
                 </header>
 
 
@@ -85,4 +99,4 @@ class Header extends React.Component {
 
 }
 
-export default Header;
+export default MyHeader;

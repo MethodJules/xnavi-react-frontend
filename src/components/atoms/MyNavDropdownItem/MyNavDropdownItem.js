@@ -1,7 +1,9 @@
 import React from "react";
-import { NavDropdown, Navbar, Nav, Button } from 'react-bootstrap';
+import { NavDropdown } from 'react-bootstrap';
 
 class MyNavDropdownItem extends React.Component {
+
+ 
   showSettings(event) {
     event.preventDefault();
 
@@ -13,18 +15,17 @@ class MyNavDropdownItem extends React.Component {
 
 
 
-    var names = ['test_item1', 'test_item2', 'test_item3'];
+
     return (
-      <div>
-
-
-        {names.map(function (name, index) {
-          return <NavDropdown.Item href="/download" key={index} > {name} </NavDropdown.Item>;
-        })}
 
 
 
-      </div>
+
+      <NavDropdown.Item href={this.props.href} > {this.props.title} </NavDropdown.Item>
+
+
+
+
 
     );
   }

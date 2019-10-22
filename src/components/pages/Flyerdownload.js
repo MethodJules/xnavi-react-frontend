@@ -1,5 +1,5 @@
 import React, {} from 'react';
-import Header from '../organism/Header/Header';
+import MyHeader from '../organism/Header/MyHeader';
 import Search from '../organism/MorphSearch/Search';
 import SideBar from '../organism/SideBar/SideBar';
 import Row from 'react-bootstrap/Row';
@@ -12,7 +12,7 @@ class Flyerdownload extends React.Component {
     render() {
         return (
             <div>
-                <Header></Header>
+                <MyHeader/>
                 <Row>
                     <Col xs={3}> <Search></Search> </Col>
                     <Col xs={6}>     <br></br> <br></br> Hier Flyer verknüpfen       </Col>
