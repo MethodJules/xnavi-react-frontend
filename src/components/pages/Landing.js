@@ -17,7 +17,7 @@ class Landing extends React.Component {
         
         
             <div>
-                <MyHeader></MyHeader>
+                <Header></Header>
                 <Row>
                     <Col xs={3}> <Search></Search> </Col>
                     <Col xs={6}>            </Col>

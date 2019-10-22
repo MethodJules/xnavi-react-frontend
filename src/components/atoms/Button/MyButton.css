@@ -1,4 +1,26 @@
-/*Stylesheet for Morphologic Search Component*/
+.btn {
+    margin: 2px !important;
+    border-radius: 0% !important;
+    font-size: 0.75rem !important;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #939393 !important;
+    border-color: #939393 !important;
+    position: relative;
+    
+}
+
+
+.btn-primary:focus, .btn-primary:focus:not(.focus-visible) {
+    box-shadow: none !important;
+}
+
+/*provisorisch*/
+.btn-primary:focus {
+    color:#64df57 !important;
+}
 
 .outer_border, .h1 {
     text-transform: uppercase;
@@ -45,6 +67,7 @@
 }
 
 
+
 .card-header {
     padding: 0 !important;
     margin-bottom: 0 !important;
@@ -59,3 +82,36 @@
     padding-top: 0% !important;
 }
 
+.btn-link {
+    padding-left: 0px !important;
+    color: #2e2f30 !important;
+    text-decoration: none !important;
+}
+
+#filter-zurueck {
+    background-color: #93939300 !important;
+    border-color: #93939300 !important;
+    color: #2e2f30 !important;
+    padding-left: 0px !important;
+    padding-right: 15px !important;
+    text-decoration: underline !important;
+}
+
+#filter-zurueck:hover {
+    color: #64df57 !important;
+}
+
+#such-param {
+    padding-left: 0px !important;
+    text-decoration: underline !important;
+}
+
+#such-param:hover {
+    color: #64df57 !important;
+}
+
+#suche {
+    left: 23px !important;
+    background-color: #595959 !important;
+    border-color: #595959 !important;
+}

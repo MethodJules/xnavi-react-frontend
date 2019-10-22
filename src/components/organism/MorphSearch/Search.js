@@ -1,4 +1,4 @@
-import React, {} from 'react';
+import React, { } from 'react';
 import './Search.css';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
@@ -9,6 +9,9 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import CustomSelect from '../../atoms/CustomSelect/CustomSelect';
 import SingleSelect from '../../atoms/SingleSelect/SingleSelect';
 import Accordion from 'react-bootstrap/Accordion';
+import MyButton from '../../atoms/Button/MyButton';
+import MySearchbar from '../../atoms/Searchbar/MySearchbar';
+import MyAccordion from '../../organism/MyAccordion/MyAccordion';
 
 var morphDropDown = {
     position: 'relative',
@@ -17,68 +20,30 @@ var morphDropDown = {
     transform: 'translate3d(0px, 0px, 0px)'
 };
 
-
-
 class Search extends React.Component {
 
     render() {
         return (
             <Card className="outer_border">
-                <Card.Body> 
+                <Card.Body>
                     <h1>Portalsuche</h1>
                     <Form className="SearchPanel">
 
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Control type="search" placeholder="Suche.."/>
-                        </Form.Group>
+                        <MySearchbar placeholder="Suche" ></MySearchbar>
 
-                        <Button variant="primary">Forschngsergebnis</Button>
-                        <Button variant="primary">Projekt</Button>
-                        <Button variant="primary">Publikation</Button>
-                        <Button variant="primary">Wissenskarte</Button>
+                        <MyButton button_name="Forschungsergebnis" variant="primary"></MyButton>
+                        <MyButton button_name="Projekt" variant="primary"></MyButton>
+                        <MyButton button_name="Publikation" variant="primary"></MyButton>
+                        <MyButton button_name="Wissenskarte" variant="primary"></MyButton>
 
-                        <Accordion> 
-                            <Card>
-                                <Card.Header>
-                                    <Accordion.Toggle as={Button} variant="link" id="such-param" eventKey="0">
-                                        Morphologische Suche
-                                    </Accordion.Toggle>
-                                </Card.Header>
-                                <Accordion.Collapse eventKey="0">
-                                    <Card.Body id="card-wideness" >
-                                        <CustomSelect></CustomSelect>
-                                        <CustomSelect></CustomSelect>
-                                    </Card.Body>
-                                </Accordion.Collapse>
-                            </Card>
-                        </Accordion>
+                        <MyAccordion accordion_name="Morphologische Suche"></MyAccordion>
 
-                        <Accordion> 
-                            <Card>
-                                <Card.Header>
-                                    <Accordion.Toggle as={Button} variant="link" id="such-param" eventKey="0">
-                                        Publikationsbezogene Suche
-
-                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-
-
-                                    </Accordion.Toggle>
-                                </Card.Header>
-                                <Accordion.Collapse eventKey="0">
-                                    <Card.Body id="card-wideness" >
-                                        <CustomSelect></CustomSelect>
-                                        <CustomSelect></CustomSelect>
-                                        <CustomSelect></CustomSelect>
-                                        <CustomSelect></CustomSelect>
-                                    </Card.Body>
-                                </Accordion.Collapse>
-                            </Card>
-                        </Accordion>
+                        <MyAccordion accordion_name="Publikationsbezogene Suche"></MyAccordion>
 
                         <p></p>
 
-                        <Button variant="link" id="filter-zurueck" >Filter zurücksetzen</Button>
-                        <Button variant="primary" id="suche">Suche</Button>
+                        <MyButton button_name="Filter zurücksetzen" variant="link" id="filter-zurueck"></MyButton>
+                        <MyButton button_name="Suche" variant="primary" id="suche"></MyButton>
 
                     </Form>
                 </Card.Body>
