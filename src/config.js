@@ -1,7 +1,7 @@
 //VON D8 REACT
 //export default {
   // copy this file to config.js and edit the settings to match yours
-  //drupal_url: 'http://my-drupal-8-site.com'
+  //drupal_url: 'http://cultrualrememberancetest2.dd:8083'
 //}
 
 const merge = require('lodash/merge')
@@ -18,5 +18,6 @@ const config = {
   production: {},
 }
 
+//vorrübergehend deaktiviert
 module.exports = merge(config.all, config[config.all.env])
 

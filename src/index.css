@@ -18,7 +18,8 @@ code {
 }
 
 .inhalt {
-  margin-left: 5% !important;
+  margin-left: 0% !important;
+  background: rgba(155, 155, 155, 0.637) !important;
 }
 
 
@@ -60,6 +61,10 @@ code {
 
 .row {
   margin-right: 0% !important;
+}
+
+.col-6 {
+  top: 50px !important;
 }
 
 

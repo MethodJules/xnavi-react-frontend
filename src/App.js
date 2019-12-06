@@ -12,17 +12,21 @@ import Marktplatz from './components/pages/Marktplatz';
 import './index.css';
 
 
+
+
 const App = () => {
+  
   return (
 
-    <Router>
-    
+
+  <Router>
+
 
     <div>
       <Switch>
 
         <Route path="/landing">
-        <Landing></Landing>
+          <Landing></Landing>
         </Route>
 
         <Route path="/download">
@@ -50,12 +54,12 @@ const App = () => {
         </Route>
 
         <Route path="">
-        <Landing></Landing>
+          <Landing></Landing>
         </Route>
 
       </Switch>
     </div>
-    </Router>
+  </Router>
 
     
 
